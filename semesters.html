@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Semester | Aniket Kharose</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background Animation Canvas -->
+    <div class="container">
+        <h1 id="page-title"
+            style="text-align: center; font-size: 3rem; margin-bottom: 60px; color: var(--primary-color);">Select
+            Your Semester</h1>
+
+        <div id="content-grid" class="sem-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 900px; margin: 0 auto;">
+            <!-- Dynamic Content -->
+        </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/aniket-kharose-3287242a5"><i class="fab fa-linkedin"></i></a>
+                <a href="http://www.youtube.com/@Aniketkharose-x2x" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="mailto:aniketk8010@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Aniket Kharose. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <style>
+        .sem-card {
+            transition: 0.4s;
+        }
+
+        .sem-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const branch = params.get('branch');
+            const grid = document.getElementById('content-grid');
+            const title = document.getElementById('page-title');
+
+            if (branch === 'ENTC') {
+                // Show Semesters
+                grid.innerHTML = `
+                    <!-- Semester 5 Card -->
+                    <a href="subjects.html?sem=5&branch=ENTC" class="glass-card sem-card"
+                        style="display: block; text-align: center; padding: 60px 30px; text-decoration: none; color: white;">
+                        <div class="icon" style="font-size: 4rem; margin-bottom: 20px; color: var(--secondary-color);">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Semester 5</h2>
+                        <p style="color: rgba(255,255,255,0.7);">Explore notes for TE E&TC Sem 5 subjects.</p>
+                    </a>
+
+                    <!-- Semester 6 Card -->
+                    <a href="subjects.html?sem=6&branch=ENTC" class="glass-card sem-card"
+                        style="display: block; text-align: center; padding: 60px 30px; text-decoration: none; color: white;">
+                        <div class="icon" style="font-size: 4rem; margin-bottom: 20px; color: var(--primary-color);">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Semester 6</h2>
+                        <p style="color: rgba(255,255,255,0.7);">Explore notes for TE E&TC Sem 6 subjects.</p>
+                    </a>
+                `;
+            } else {
+                // Show Coming Soon
+                title.innerText = "Notes Coming Soon";
+                grid.style.display = 'flex';
+                grid.style.justifyContent = 'center';
+
+                grid.innerHTML = `
+                    <div class="glass-card" style="text-align: center; padding: 60px; max-width: 600px; width: 100%;">
+                        <div class="icon" style="font-size: 4rem; margin-bottom: 20px; color: var(--primary-color);">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Notes Coming Soon</h2>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 1.2rem;">Notes for this branch are currently unavailable.</p>
+                        <a href="notes.html" class="btn-glow" style="margin-top: 30px; display: inline-block;">Go Back</a>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+
+</html>

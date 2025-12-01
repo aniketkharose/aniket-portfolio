@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Subject | Aniket Kharose</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background Animation Canvas -->
+    <div class="container">
+        <h1 id="page-title"
+            style="text-align: center; font-size: 3rem; margin-bottom: 60px; color: var(--primary-color);">Subjects
+        </h1>
+
+        <div id="subjects-grid" class="subjects-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 1000px; margin: 0 auto;">
+            <!-- Dynamic Content Will Be Loaded Here -->
+        </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/aniket-kharose-3287242a5"><i class="fab fa-linkedin"></i></a>
+                <a href="http://www.youtube.com/@Aniketkharose-x2x" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="mailto:aniketk8010@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Aniket Kharose. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const sem = params.get('sem');
+            const branch = params.get('branch');
+            const grid = document.getElementById('subjects-grid');
+            const title = document.getElementById('page-title');
+
+            if (branch === 'ENTC') {
+                if (sem === '5') {
+                    title.innerText = "Semester 5 Subjects";
+
+                    const subjects = [
+                        { code: 'DBMS', name: 'Database Management System' },
+                        { code: 'MCA', name: 'Microcontroller and Applications' },
+                        { code: 'CN', name: 'Computer Networks' },
+                        { code: 'EMFT', name: 'Electromagnetic Field Theory' },
+                        { code: 'DC', name: 'Digital Communication' },
+
+                    ];
+
+                    subjects.forEach(sub => {
+                        const card = document.createElement('div');
+                        card.className = 'glass-card subject-card';
+                        card.style.textAlign = 'center';
+                        card.innerHTML = `
+                            <h2 style="font-size: 2rem; margin-bottom: 10px; color: var(--primary-color);">${sub.code}</h2>
+                            <p style="margin-bottom: 30px; font-size: 1.1rem; color: rgba(255,255,255,0.8);">${sub.name}</p>
+                            <div style="display: flex; flex-direction: column; gap: 15px;">
+                                <a href="viewer.html?subject=${sub.code}&type=insem" class="btn-glow" style="width: 100%;">In-Sem Notes</a>
+                                <a href="viewer.html?subject=${sub.code}&type=endsem" class="btn-glow" style="width: 100%; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));">End-Sem Notes</a>
+                            </div>
+                        `;
+                        grid.appendChild(card);
+                    });
+
+                } else if (sem === '6') {
+                    title.innerText = "Semester 6 Subjects";
+                    grid.style.display = 'flex';
+                    grid.style.justifyContent = 'center';
+
+                    const card = document.createElement('div');
+                    card.className = 'glass-card';
+                    card.style.textAlign = 'center';
+                    card.style.padding = '50px';
+                    card.style.maxWidth = '600px';
+                    card.innerHTML = `
+                        <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--secondary-color);">SEM 6 NOTES — COMING SOON</h2>
+                        <p style="font-size: 1.2rem; color: rgba(255,255,255,0.7);">These notes are not available yet. Stay tuned!</p>
+                    `;
+                    grid.appendChild(card);
+                } else {
+                    title.innerText = "Invalid Semester";
+                    grid.innerHTML = `<p style="text-align: center; width: 100%;">Please select a valid semester from the <a href="notes.html" style="color: var(--primary-color);">Notes Store</a>.</p>`;
+                }
+            } else {
+                // Show Coming Soon for other branches or missing branch
+                title.innerText = "Notes Coming Soon";
+                grid.style.display = 'flex';
+                grid.style.justifyContent = 'center';
+
+                grid.innerHTML = `
+                    <div class="glass-card" style="text-align: center; padding: 60px; max-width: 600px; width: 100%;">
+                        <div class="icon" style="font-size: 4rem; margin-bottom: 20px; color: var(--primary-color);">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Notes Coming Soon</h2>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 1.2rem;">Notes for this branch are currently unavailable.</p>
+                        <a href="notes.html" class="btn-glow" style="margin-top: 30px; display: inline-block;">Go Back</a>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Viewer | Aniket Kharose</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background Animation Canvas -->
+    <div class="container">
+        <div class="glass-card" style="padding: 40px; text-align: center; margin-bottom: 50px;">
+            <h1 id="viewer-title" style="font-size: 2.5rem; margin-bottom: 10px; color: var(--primary-color);">
+                Subject Notes</h1>
+            <p id="viewer-subtitle" style="font-size: 1.2rem; color: rgba(255,255,255,0.8);">Previewing sample
+                pages...</p>
+        </div>
+
+        <!-- Previews Grid -->
+        <div id="previews-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 60px;">
+            <!-- Dynamic Images Will Be Loaded Here -->
+        </div>
+
+        <!-- Download Action -->
+        <div style="text-align: center;">
+            <a id="download-btn" href="#" class="btn-glow"
+                style="font-size: 1.5rem; padding: 20px 60px; box-shadow: 0 0 30px rgba(0, 242, 255, 0.3);">
+                <i class="fas fa-download" style="margin-right: 10px;"></i> DOWNLOAD ALL NOTES
+            </a>
+            <p style="margin-top: 20px; color: rgba(255,255,255,0.6); font-size: 0.9rem;">Secure payment via
+                Instamojo. Instant download after payment.</p>
+        </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/aniket-kharose-3287242a5"><i class="fab fa-linkedin"></i></a>
+                <a href="http://www.youtube.com/@Aniketkharose-x2x" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="mailto:aniketk8010@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Aniket Kharose. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/viewer.js"></script>
+</body>
+
+</html>

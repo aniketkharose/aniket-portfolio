@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Branch | Notes Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background Animation Canvas -->
+    <div class="container">
+        <h1 style="text-align: center; font-size: 3rem; margin-bottom: 60px; color: var(--primary-color);">Select
+            Your Branch</h1>
+
+        <div class="branch-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+
+            <!-- E&TC -->
+            <a href="semesters.html?branch=ENTC" class="glass-card branch-card">
+                <div class="icon"><i class="fas fa-microchip"></i></div>
+                <h2>E&TC</h2>
+            </a>
+
+            <!-- CSE -->
+            <a href="semesters.html?branch=CSE" class="glass-card branch-card">
+                <div class="icon"><i class="fas fa-laptop-code"></i></div>
+                <h2>CSE</h2>
+            </a>
+
+            <!-- IT -->
+            <a href="semesters.html?branch=IT" class="glass-card branch-card">
+                <div class="icon"><i class="fas fa-network-wired"></i></div>
+                <h2>IT</h2>
+            </a>
+
+            <!-- Mechanical -->
+            <a href="semesters.html?branch=MECH" class="glass-card branch-card">
+                <div class="icon"><i class="fas fa-cogs"></i></div>
+                <h2>Mechanical</h2>
+            </a>
+
+            <!-- Civil -->
+            <a href="semesters.html?branch=CIVIL" class="glass-card branch-card">
+                <div class="icon"><i class="fas fa-building"></i></div>
+                <h2>Civil</h2>
+            </a>
+
+            <!-- Electrical -->
+            <a href="semesters.html?branch=ELEC" class="glass-card branch-card">
+                <div class="icon"><i class="fas fa-bolt"></i></div>
+                <h2>Electrical</h2>
+            </a>
+
+            <!-- AIDS -->
+            <a href="semesters.html?branch=AIDS" class="glass-card branch-card">
+                <div class="icon"><i class="fas fa-brain"></i></div>
+                <h2>AIDS</h2>
+            </a>
+
+            <!-- Other Branches -->
+            <a href="semesters.html?branch=OTHER" class="glass-card branch-card">
+                <div class="icon"><i class="fas fa-layer-group"></i></div>
+                <h2>Other Branches</h2>
+            </a>
+
+        </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/aniket-kharose-3287242a5"><i class="fab fa-linkedin"></i></a>
+                <a href="http://www.youtube.com/@Aniketkharose-x2x" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="mailto:aniketk8010@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Aniket Kharose. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <style>
+        .branch-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-decoration: none;
+            color: white;
+            transition: 0.4s;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .branch-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+        }
+
+        .branch-card .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            transition: 0.4s;
+        }
+
+        .branch-card:hover .icon {
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        .branch-card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+    </style>
+</body>
+
+</html>
