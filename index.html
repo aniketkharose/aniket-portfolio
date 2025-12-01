@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniket Kharose | Future AI/ML Engineer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Background Animation Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">AK</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="notes.html">Notes Store</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <header class="hero" style="padding: 150px 0 100px; min-height: 100vh; display: flex; align-items: center;">
+        <div class="container"
+            style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+            <div class="hero-text" style="flex: 1; min-width: 300px; padding-right: 50px;">
+                <h1
+                    style="font-size: 3.5rem; margin-bottom: 20px; background: linear-gradient(to right, #fff, var(--primary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    Hi, I’m Aniket Kharose</h1>
+                <h2 style="font-size: 1.5rem; color: var(--secondary-color); margin-bottom: 20px;">Developing AI/ML
+                    Skills while Strengthening Embedded & Communication Engineering</h2>
+                <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 40px; color: rgba(255,255,255,0.8);">
+                    I’ve begun my journey into AI/ML while actively working on Embedded & Communication projects
+                </p>
+
+                <div class="hero-btns" style="display: flex; gap: 20px;">
+                    <a href="notes.html" class="btn-glow">Explore Notes Store</a>
+                    <a href="#projects" class="btn-glow"
+                        style="background: transparent; border: 1px solid var(--primary-color);">View Projects</a>
+                </div>
+            </div>
+            <div class="hero-img" style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
+                <div class="img-glow"
+                    style="width: 350px; height: 350px; border-radius: 50%; background: radial-gradient(circle, rgba(0,242,255,0.2) 0%, rgba(0,0,0,0) 70%); display: flex; align-items: center; justify-content: center; position: relative;">
+                    <!-- Placeholder for Profile Image -->
+                    <div
+                        style="width: 300px; height: 300px; border-radius: 50%; background: #1a1a2e; border: 2px solid var(--primary-color); overflow: hidden; position: relative; z-index: 2;">
+                        <img src="assets/ani1.png" alt="Aniket Kharose"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <!-- Orbiting Particles (CSS Animation can be added here) -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" style="padding: 100px 0;">
+        <div class="container">
+            <div class="glass-card" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 30px; color: var(--primary-color);">Technical Arsenal</h2>
+                <div class="skills-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                    <span class="skill-tag">AI/ML (Learning)</span>
+                    <span class="skill-tag">Embedded Systems</span>
+                    <span class="skill-tag">Microcontrollers</span>
+                    <span class="skill-tag">Communication Systems</span>
+                    <span class="skill-tag">C/Assembly</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" style="padding: 100px 0;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 50px; text-align: center;">Featured Projects</h2>
+            <div class="projects-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <!-- Project Card 1 -->
+                <div class="glass-card project-card">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">AI-Enhanced Smart Home Automation</h3>
+                    <p style="margin-bottom: 20px; color: rgba(255,255,255,0.7);">
+                        AI-assisted smart home system using ESP32 with automation logic, sensors and cloud integration.
+                    </p>
+                    <a href="#" style="color: var(--secondary-color); font-weight: 600;">View Details <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="glass-card project-card">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">AI-Based Line Follower Robot with PID
+                    </h3>
+                    <p style="margin-bottom: 20px; color: rgba(255,255,255,0.7);">
+                        Intelligent robot with PID tuning and real-time IR sensor feedback for smooth navigation.
+                    </p>
+                    <a href="#" style="color: var(--secondary-color); font-weight: 600;">View Details <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="glass-card project-card">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">IoT Weather Monitoring & Analytics
+                        System</h3>
+                    <p style="margin-bottom: 20px; color: rgba(255,255,255,0.7);">
+                        ESP32-based weather station with cloud logging, real-time monitoring and analytics dashboard.
+                    </p>
+                    <a href="#" style="color: var(--secondary-color); font-weight: 600;">View Details <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Notes Store Preview Section -->
+    <section id="notes-preview"
+        style="padding: 100px 0; background: linear-gradient(to bottom, transparent, rgba(0, 242, 255, 0.05));">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 3rem; margin-bottom: 20px;">Study Notes Hub</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; color: rgba(255,255,255,0.8);">Premium, handwritten notes
+                for E&TC Engineering Students. Ace your exams with ease.</p>
+            <a href="notes.html" class="btn-glow" style="font-size: 1.2rem; padding: 15px 40px;">Explore Notes Store</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/aniket-kharose-3287242a5"><i class="fab fa-linkedin"></i></a>
+                <a href="http://www.youtube.com/@Aniketkharose-x2x" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="mailto:aniketk8010@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Aniket Kharose. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <style>
+        .skill-tag {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--primary-color);
+            border-radius: 20px;
+            color: #fff;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary-color);
+            color: #000;
+            box-shadow: 0 0 15px var(--primary-color);
+        }
+    </style>
+</body>
+
+</html>
