@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const instamojoLinks = {
         'DC': {
             'insem': 'https://imojo.in/subject-insem',
-            'endsem': 'https://imojo.in/subject-endsem'
+            'endsem': 'https://imojo.in/dOCTv0'
         },
         'MCA': {
             'insem': 'https://imojo.in/1SqR1T4',
@@ -143,4 +143,5 @@ document.addEventListener('DOMContentLoaded', () => {
         gridEl.appendChild(link);
     }
 });
+
 
