@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'CN': {
             'insem': 'https://imojo.in/subject-insem',
-            'endsem': 'https://imojo.in/Mx0B0f'
+            'endsem': 'https://imojo.in/1aoT5j6'
         }
     };
 
@@ -143,5 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
         gridEl.appendChild(link);
     }
 });
+
 
 
